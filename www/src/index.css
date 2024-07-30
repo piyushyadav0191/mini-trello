@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primaryPurple: #635fc7;
+  --primaryPurpleHover: #a8a4ff;
+  --primaryLightPurple: #635fc71a;
+  --primaryLightPurpleHover: #635fc740;
+  --primaryBlack: #000112;
+  --primaryVeryDarkGrey: #20212c;
+  --primaryDarkGrey: #2b2c37;
+  --primaryLinesDark: #3e3f4e;
+  --primaryMediumGrey: #828fa3;
+  --primaryLinesLight: #e4ebfa;
+  --primaryLightGrey: #f4f7fd;
+  --primaryWhite: #ffffff;
+  --primaryRed: #ea5555;
+  --primaryRedHover: #ff9898;
+  --primaryBorder: #828fa340;
+
+  /* Others */
+  --sidebarTabletWidth: 260px;
+  --sidebarDesktopWidth: 300px;
+
+  --headerMobilePadding: 16px;
+  --headerTabletPadding: 26px;
+  --headerDesktopPadding: 34px;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply text-primaryBlack dark:text-primaryWhite;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primaryMediumGrey);
+    border-radius: 5px;
+  }
+}
+
+@layer utilities {
+  .body-l {
+    @apply text-[13px] font-medium leading-[23px];
+  }
+
+  .body-m {
+    @apply text-[12px] font-bold leading-[15px];
+  }
+
+  .heading-xl {
+    @apply text-[24px] font-bold leading-[30px];
+  }
+
+  .heading-l {
+    @apply text-[18px] font-bold leading-[23px];
+  }
+
+  .heading-m {
+    @apply text-[15px] font-bold leading-[19px];
+  }
+
+  .heading-s {
+    @apply text-[12px] font-bold leading-[15px] tracking-[2.4px];
+  }
+
+  .label {
+    @apply text-[12px] font-bold leading-normal text-primaryMediumGrey dark:text-primaryWhite;
+  }
+}
+
+#purple-gradient {
+  border: 1px solid;
+  background: linear-gradient(360deg, #4B36CC 0%, #9C93D4 107.69%);
+  /* border-image-source: linear-gradient(360deg, #4B36CC 0%, #9C93D4 107.69%); */
+  border-image-slice: 1;
+  width: 100%;
+  padding: 6px 2px 8px 2px;
+  color: #fff;
+}
+
+.purple-text {
+  color: #4534AC;
+  font-size: 14px;
+}
